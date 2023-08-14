@@ -11,8 +11,6 @@ const loadMoreBtn = document.querySelector('.load-more');
 
 let searchQuery = null;
 
-loadMoreBtn.classList.add('is-hidden');
-
 const renderPictures = async searchQuery => {
   try {
     const picturesArray = await pixabayInstance.fetchPictures(searchQuery);
@@ -80,12 +78,12 @@ const renderMorePictures = async searchQuery => {
 const handleSearchClick = event => {
   event.preventDefault();
 
-  searchQuery = formSearchEl.firstElementChild.value;
+  searchQuery = formSearchEl.firstElementChild.firstElementChild.value;
   renderPictures(searchQuery);
 };
 
 const handleLoadClick = event => {
-  searchQuery = formSearchEl.firstElementChild.value;
+  searchQuery = formSearchEl.firstElementChild.firstElementChild.value;
   renderMorePictures(searchQuery);
 };
 
