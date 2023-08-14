@@ -31,25 +31,19 @@ body {
   width: 1440px;
 }
 
-.search-section {
+.search-form {
   background-color: var(--clr-background-secondary);
   padding: 20px;
-}
-
-.search-form {
-  position: relative;
-  width: 100%;
-  max-width: 360px;
-  margin: 0 auto;
+  // margin-bottom: 20px;
+  text-align: center;
 }
 
 .search-input {
   height: 40px;
-  width: 100%;
+  width: 360px;
   border: none;
   outline: none;
   padding-left: 20px;
-  padding-right: 55px;
   border-radius: 20px;
   background-color: var(--clr-select);
   color: var(--clr-primary-bright);
@@ -60,14 +54,19 @@ body {
 }
 
 .search-button {
-  position: absolute;
-  right: 0;
+  margin-left: -40px;
   width: 40px;
   height: 40px;
   border: none;
   background-color: var(--clr-primary);
+  // border: 1px solid var(--clr-background-secondary);
   border-radius: 0 20px 20px 0;
   cursor: pointer;
+  transition: background-color 500ms;
+}
+
+.search-button:hover {
+  background-color: var(--clr-hover-primary);
 }
 
 .gallery {
@@ -77,10 +76,6 @@ body {
 
 .photo-card:nth-child(even) {
   background-color: var(--clr-background-secondary);
-}
-
-.photo-card:not(:nth-child(even)) {
-  background-color: var(--clr-background-primary);
 }
 
 .photo-card {
@@ -104,12 +99,6 @@ body {
     width: 100%;
   }
 }
-
-// .photo-card:hover {
-//   transform: scale(1.05);
-//   z-index: 1;
-//   transition: transform 300ms, z-index 0ms;
-// }
 
 .card-img {
   object-fit: cover;
@@ -143,8 +132,8 @@ body {
 }
 
 .icon-svg {
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
 }
 
 .load-more {

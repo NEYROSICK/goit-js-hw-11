@@ -1,32 +1,30 @@
 {{#each this}}
-  <a href='{{this.largeImageURL}}'>
-    <div class='photo-card'>
-      <img
-        class='card-img'
-        width='480px'
-        height='320px'
-        src='{{this.webformatURL}}'
-        alt='{{this.tags}}'
-        loading='lazy'
-      />
-      <div class='info'>
-        <p class='info-item'>
-          <b>Likes</b>
-          <b><span>{{this.likes}}</span></b>
-        </p>
-        <p class='info-item'>
-          <b>Views</b>
-          <b><span>{{this.views}}</span></b>
-        </p>
-        <p class='info-item'>
-          <b>Comments</b>
-          <b><span>{{this.comments}}</span></b>
-        </p>
-        <p class='info-item'>
-          <b>Downloads</b>
-          <b><span>{{this.downloads}}</span></b>
-        </p>
-      </div>
+  <div class='photo-card'>
+    <img
+      class='card-img'
+      width='480px'
+      height='320px'
+      src='{{this.webformatURL}}'
+      alt='{{this.tags}}'
+      loading='lazy'
+    />
+    <div class='info'>
+      <p class='info-item'>
+        <b>Likes</b>
+        <b><span>{{this.likes}}</span></b>
+      </p>
+      <p class='info-item'>
+        <b>Views</b>
+        <b><span>{{this.views}}</span></b>
+      </p>
+      <p class='info-item'>
+        <b>Comments</b>
+        <b><span>{{this.comments}}</span></b>
+      </p>
+      <p class='info-item'>
+        <b>Downloads</b>
+        <b><span>{{this.downloads}}</span></b>
+      </p>
     </div>
-  </a>
+  </div>
 {{/each}}
