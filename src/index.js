@@ -1,6 +1,9 @@
 import PixabayAPI from './js/pixabay-api';
 import createCardsMarkup from './createCardsMarkup.hbs';
 
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
+
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const pixabayInstance = new PixabayAPI();
@@ -31,6 +34,8 @@ const renderPictures = async searchQuery => {
 
     galleryEl.innerHTML = createCardsMarkup(picturesArray.hits);
 
+    let lightbox = new SimpleLightbox('.gallery a', {});
+
     if (
       pixabayInstance.page * pixabayInstance.perPage >=
       picturesArray.totalHits
@@ -59,6 +64,8 @@ const renderMorePictures = async searchQuery => {
       'beforeend',
       createCardsMarkup(picturesArray.hits)
     );
+
+    let lightbox = new SimpleLightbox('.gallery a', {});
 
     if (
       pixabayInstance.page * pixabayInstance.perPage >=
