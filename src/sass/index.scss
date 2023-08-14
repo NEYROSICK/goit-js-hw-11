@@ -68,12 +68,6 @@ body {
   background-color: var(--clr-primary);
   border-radius: 0 20px 20px 0;
   cursor: pointer;
-  transition: background-color 500ms;
-  padding: 0;
-}
-
-.search-button:hover {
-  background-color: var(--clr-hover-primary);
 }
 
 .gallery {
